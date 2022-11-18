@@ -1,20 +1,24 @@
 body{
     background-color: beige;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
 }
 .form{
     width: 400px;
-    background-color: #b9b9bb;
+    background-color: #f8d7da;
     margin: 100px auto 0;
-    display: flex;
+    padding: 25px;
+    border-radius:15px;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
+    position: relative;
+    box-shadow: 2px 0 4px 1px grey;
 
 
 }
 .input_group
 {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     
@@ -35,24 +39,32 @@ input{
     margin-top: 30px;
     width: 110px;
     height: 40px;
-       background-color:#fff200;
-       border: none;
+       /* background-color:#fff200; */
+       /* border: none; */
        font-size: 21px;
+       
+       
+}
+.btn-outline-primary
+{
+  --bs-btn-color: #ffffff;
 }
 
 
 #message
 {
-    margin: 20px auto 0;
+    /* margin: 20px auto 0;
     padding: 15px;
     width: 350px;
     height: 50px;
     background-color:#00ff8e;
     color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 21px;
+    font-size: 21px; */
     display: none;
-  transition: all 1.4s;
+    transition: all 1.4s;
+    margin-top: 25px;
+    border-radius:15px;
 
 }
 #error
@@ -68,4 +80,52 @@ input{
     display: none;
   
 
+}
+/*----------------------------------*/
+body{background:#ECF0F1}
+
+.load{
+  /* border: 1px solid #ECF0F1; */
+  display: none;
+  padding: 5px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform-origin: center center;
+  transform:translate(-50%, -50%) rotate(135deg);
+  /*change these sizes to fit into your project*/
+  width:10px;
+  height:10px;
+  
+}
+.load hr{
+  border:0;
+  margin:0;
+  width:40%;
+  height:40%;
+  position:absolute;
+  border-radius:50%;
+  animation:spin 2s ease infinite;
+}
+
+.load :first-child{background:#19A68C;animation-delay:-1.5s}
+.load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+.load :last-child{background:#193B48}
+
+@keyframes spin{
+  0%,100%{transform:translateX(200%)}
+  25%{transform:translateY(200%)}
+  50%{transform:translateX(0)}
+  75%{transform:translateY(0)}
+}
+
+.img
+{
+  position: absolute;
+  left: 358px;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
