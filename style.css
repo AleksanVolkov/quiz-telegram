@@ -34,14 +34,18 @@ input{
 }
 
 
-.btn{
+.btn_m{
 
     margin-top: 30px;
-    width: 110px;
-    height: 40px;
-       /* background-color:#fff200; */
-       /* border: none; */
-       font-size: 21px;
+    width: 130px;
+    height: 50px;
+    background-color:#bfddeba1; 
+    border: 1px solid rgba(128, 128, 128, 0.414); 
+    font-size: 18px;
+    border-radius:15px;
+    color: rgb(116, 116, 116);
+    font-weight: 700;
+   
        
        
 }
@@ -72,11 +76,12 @@ input{
     margin: 20px auto 0;
     padding: 15px;
     width: 350px;
-    height: 90px;
-    background-color:#ff1900;
+    height: 125px;
+    background-color:#ff5341;
     color: rgb(255, 255, 255);
     text-align: center;
     font-size: 22px;
+    border-radius:15px;
     display: none;
   
 
@@ -89,13 +94,13 @@ body{background:#ECF0F1}
   display: none;
   padding: 5px;
   position:absolute;
-  top:50%;
+  top:84%;
   left:50%;
   transform-origin: center center;
   transform:translate(-50%, -50%) rotate(135deg);
   /*change these sizes to fit into your project*/
-  width:10px;
-  height:10px;
+  width:30px;
+  height:30px;
   
 }
 .load hr{
@@ -128,4 +133,7 @@ body{background:#ECF0F1}
   width: 80px;
   height: 80px;
   object-fit: contain;
+  border-radius: 50%;
+ 
+  box-shadow: 3px 2px 4px 1px grey
 }
