@@ -12,11 +12,12 @@ e.preventDefault();
 
 
 
-let message = '<b>Сообщение из телеграмм</b>\n';
+let message = '<b>Обращение от клиента</b>\n';
    message+=`<b>вид работ:</b>${attributeValues1}\n`;
    message+=`<b>замерщик:</b>${attributeValues2}\n`;
    message+=`<b>расстояние:</b>${attributeValues3}\n`;
-   message+=`<b>доставка:</b>${attributeValues4}`;
+   message+=`<b>доставка:</b>${attributeValues4}\n`;
+   message+=`<b>монтаж:</b>${attributeValues5}\n`;
 
 
    console.log(message);
@@ -140,6 +141,12 @@ axios.post(URI_API, {
             case'без доставки':
             attributeValues4.push(input.val());
             break;
+            case'нужен монтаж':
+            attributeValues5.push(input.val());
+            break;
+            case'без монтажа':
+            attributeValues5.push(input.val());
+            break;
         }
        }
      })
@@ -152,10 +159,10 @@ axios.post(URI_API, {
    const imgQuiz = document.querySelectorAll('.img_quiz');
    
    imgQuiz.forEach(item=>{
-    console.log(item);
+    
        item.addEventListener('click', function(e){
         const target = e.currentTarget;
-        console.log(target);
+        
         if(target && target.classList.contains('img_quiz')){
           const done = document.createElement('div');
          
@@ -177,10 +184,10 @@ axios.post(URI_API, {
    const twoQ = document.querySelectorAll('.check_one_quiz');
    
    twoQ.forEach(item=>{
-    console.log(item);
+    
     item.addEventListener('click', function(e){
       const target = e.currentTarget;
-      console.log(target);
+      
       if(target && target.classList.contains('check_one_quiz')){
         const doneT = document.createElement('div');
          
@@ -224,7 +231,7 @@ axios.post(URI_API, {
          console.log(card)
          break;
        case 3:
-         quiz_field.style.transform = "translateX(-3500px)";
+         quiz_field.style.transform = "translateX(-3600px)";
          card = 4;
          break;
        

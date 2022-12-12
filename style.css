@@ -1,3 +1,11 @@
+
+.block
+{
+    max-width: 1900px;
+    background-color:#eec062;
+}
+
+
 label
 {
     cursor: pointer;
@@ -14,6 +22,7 @@ label
     font-size: 28px;
     margin-top: 40px;
     margin-left: 40px;
+    text-shadow: 0px 0px 4px black;
 }
 .btn_quiz
 {
@@ -197,10 +206,27 @@ label
     color: white;
     
 }
+.measure_img
+{
+    width: 470px;
+    margin: 50px auto;
+   
+   
+}
+.measure_img img
+{
+    object-fit: contain;
+   
+    width: 100%;
+}
 
 /*22222222222222222222222222*/
 /*333333333333333333333333333*/
 
+.three
+{
+    position: relative;
+}
 .one_col
 {
     display: flex;
@@ -213,5 +239,49 @@ label
 {
   margin-top: 20px;
 }
+.map_img
+{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 559px;
+    top: 142px;
+}
+.map_img img
+{
+    object-fit: contain;
+   
+    width: 100%;
+}
 
 /*333333333333333333333333333*/
+
+/*4444444444444444444444444444444444*/
+.deliv_img
+{
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+.deliv_img img
+{
+    object-fit: contain;
+    margin: 40px auto;
+    width: 100%;
+}
+
+/*55555555555555555555555555555555555555555555555*/
+
+
+.bild_img
+{
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+}
+.bild_img img
+{
+    object-fit: contain;
+    margin: 40px auto;
+    width: 100%;
+}
