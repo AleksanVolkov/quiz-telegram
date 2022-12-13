@@ -13,11 +13,17 @@ e.preventDefault();
 
 
 let message = '<b>Обращение от клиента</b>\n';
+  
    message+=`<b>вид работ:</b>${attributeValues1}\n`;
    message+=`<b>замерщик:</b>${attributeValues2}\n`;
    message+=`<b>расстояние:</b>${attributeValues3}\n`;
    message+=`<b>доставка:</b>${attributeValues4}\n`;
    message+=`<b>монтаж:</b>${attributeValues5}\n`;
+   message+=`<b>куда отправить расчет:</b>${attributeValues6}\n`;
+     message+=`<b>имя:</b>${attributeValues7}\n`;
+    message+=`<b>телефон:</b>${attributeValues8}\n`;
+    message+=`<b>email:</b>${attributeValues9}\n`;
+  
 
 
    console.log(message);
@@ -78,17 +84,38 @@ axios.post(URI_API, {
  
  
  const inputs = document.querySelectorAll('.radio_btn input');
+ const inputsS = document.querySelectorAll('.radio input');
    let attributeValues1 = [],
        attributeValues2 = [],
        attributeValues3 = [],
        attributeValues4 = [],
        attributeValues5 = [],
-       attributeValues6 = [];
+       attributeValues6 = [],
+       attributeValues7 = [],
+       attributeValues8 = [],
+       attributeValues9 = [];
  
      inputs.forEach(element => {
      $(element).click(() => pushInputsDataToArray())
    })
- 
+   inputsS.forEach(element => {
+    element.addEventListener('input',function(e){
+      switch(element.name){
+        case"name":
+        attributeValues7 = this.value;
+        break;
+        case"phone":
+        attributeValues8 = this.value;
+        break;
+        case"email":
+        attributeValues9= this.value;
+        break;
+      }
+      
+     
+    })
+  })
+  
  
    function pushInputsDataToArray() {
      
@@ -147,6 +174,18 @@ axios.post(URI_API, {
             case'без монтажа':
             attributeValues5.push(input.val());
             break;
+            case'telegram':
+            attributeValues6.push(input.val());
+            break;
+            case'viber':
+            attributeValues6.push(input.val());
+            break;
+            case'whatsapp':
+            attributeValues6.push(input.val());
+            break;
+            case'email':
+            attributeValues6.push(input.val());
+            break;
         }
        }
      })
@@ -156,8 +195,34 @@ axios.post(URI_API, {
    }
  
    /****************************************************************************************/
-   const imgQuiz = document.querySelectorAll('.img_quiz');
+   const imgQuiz = document.querySelectorAll('.img_quiz'),
+         imgForm = document.querySelectorAll('.form_img')
    
+
+         imgForm.forEach(item=>{
+    
+          item.addEventListener('click', function(e){
+           const target = e.currentTarget;
+           
+           if(target && target.classList.contains('form_img')){
+             const done = document.createElement('div');
+            
+           
+            item.classList.add('active_img_quiz');
+   
+   
+           
+            item.append(done);
+           }
+   
+           
+            
+          })
+        
+        
+      })
+
+
    imgQuiz.forEach(item=>{
     
        item.addEventListener('click', function(e){
@@ -234,6 +299,11 @@ axios.post(URI_API, {
          quiz_field.style.transform = "translateX(-3600px)";
          card = 4;
          break;
+      case 4:
+        quiz_field.style.transform = "translateX(-4500px)";
+        card = 5;
+        nextQuestion.style.display="none";
+        break;
        
      }
  
@@ -258,6 +328,11 @@ axios.post(URI_API, {
       case 4:
         quiz_field.style.transform = "translateX(-2700px)";
         card = 3;
+        break;
+      case 5:
+        quiz_field.style.transform = "translateX(-3600px)";
+        card = 4;
+        nextQuestion.style.display="block";
         break;
       
     }

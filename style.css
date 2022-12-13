@@ -4,17 +4,27 @@
     max-width: 1900px;
     background-color:#eec062;
 }
+.one, .two, .three ,.four, .five, .form
+{
+    position: relative;
+}
+/* .two
+{
+    position: relative;  
+} */
 
-
+.digit
+{
+    color:#eec062;
+    position: absolute;
+    left: 430px;
+    top: 612px;
+}
 label
 {
     cursor: pointer;
 }
-.quiz_box
-{
-    position: relative;
-  
-}
+
 .quest .title
 {
     font-weight: 600;
@@ -42,7 +52,7 @@ label
 .btn_quiz_prev
 {
     position: absolute;
-    bottom: 24px;
+    bottom: 30px;
     left: 60px;
    
     cursor: pointer;
@@ -94,9 +104,12 @@ label
 {
  appearance: none;
 }
+
+
 .radio_btn input
 {
- appearance: none;
+    appearance: none;
+  
  
 }
 .img_quiz{
@@ -173,8 +186,9 @@ label
     height: 700px;
     background-color:#3a3a3a;
     overflow: hidden;
-    
+    position: relative;
     box-sizing: border-box;
+    border-radius:20px;
 }
 .quiz_field
 {
@@ -285,3 +299,67 @@ label
     margin: 40px auto;
     width: 100%;
 }
+.form_img
+{
+    color:white;
+    text-align: center;
+    width: 116px;
+    height: 129px;
+    position: relative;
+}
+.form_img img
+{
+    width: 112px;
+    height: 125px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+.btn_m
+{
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    position: absolute;
+    color: rgb(44, 44, 44);
+    font-size: calc(12px + 8* (100vw / 1900));
+    line-height: calc(13px + 7 * (100vw / 1900));
+    padding: 10px 15px;
+    width: 228px;
+   background-color:#eec062;
+   text-align: center;
+   border-radius:10px;
+   cursor: pointer;
+}
+.form .one_col
+{
+    margin-top: 20px;
+}
+.radio input#email,.radio input#name, .radio input#phone
+{
+    appearance: none;
+    height: 50px;
+    width: 400px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+ 
+}
+
+.one_col #email,.one_col #name, .one_col #phone
+{
+    margin-left: 30px;
+}
+.label_form
+{
+    position: relative;
+}
+.label_form p
+{
+    position: absolute;
+    left: -385px;
+    top: -55px;
+    color:white;
+}
+
